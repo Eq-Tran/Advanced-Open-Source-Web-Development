@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    fetch('todo.json')
+    .then(response => response.json())
+    .then(data => {
+      
+        
+      for(let index in data){
+          console.log(` ${data[index].userId}, ${data[index].id}, ${data[index].title}, ${data[index].completed}`)
+          var body = document.querySelector('body');
+          body.innerHTML += data[index].userId + "<br>";
+          body.innerHTML += data[index].id + "<br>";
+          body.innerHTML += data[index].title + "<br>";
+          body.innerHTML += data[index].completed + "<br>";
+      }
+    })
+</script>
+</html>

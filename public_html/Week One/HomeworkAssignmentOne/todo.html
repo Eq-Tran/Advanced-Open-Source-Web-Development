@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+
+    let url = 'todo.json';
+
+    fetch(url, {
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        var htmlStr = document.querySelector('body');
+        htmlStr.innerHTML += JSON.stringify(data);
+    })
+</script>
+</html>

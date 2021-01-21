@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework One - SE373</title>  
+    
+</head>
+<body>
+    <div>
+        <h1>Ethan Tran - Node.Js Server Web Page Hosting</h1>
+        <section>
+        <nav>
+            <a href="todo.json">Todo</a>
+            <a href="read-todo.html">Read-Todo</a>
+            <a href="#">Fake-Todo</a>
+        </nav>
+        </section>
+        <section>
+            <div>
+                <p>Things I Like</p>
+                <ol>
+                    <li>Programming</li>
+                    <li>Game Development</li>
+                    <li>Sleeping</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+        let myUrl = 'todo.json';
+        fetch(myUrl)
+        .then(response => response.json())
+        .then(data => {
+            
+            console.log(data);
+            console.log("here 2");
+        });
+    
+        
+    </script>
+</body>
+</html>
