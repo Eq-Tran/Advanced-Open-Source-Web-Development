@@ -6,7 +6,7 @@ const server = http.createServer((req,res) => {
 
     var u = url.parse(req.url).pathname
     let fileName = "index.html"; // 
- 
+    // correct way was to use a switch case statement for each .html page needed to be served
     console.log(fileName)
     fs.readFile(fileName, (err, fileData) => {
 
