@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card head"><h1>{{title}}</h1></div>
+            <div class="card body">
+                <section>{{> _nav}}</section>
+                <div class="d-flex flex-column">
+                    <img src="../images/chapelle_prince.jpg" alt="Chapelle">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae cum ducimus quos iusto enim maiores facere ullam ab odio magnam recusandae corrupti dicta, repellendus neque libero rem, quo eaque at.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore, dignissimos accusamus vitae suscipit officiis eligendi doloribus blanditiis illo fugit natus quod ut veritatis expedita, eum necessitatibus ipsum magni aliquid.</p>
+                </div>
+            </div>
+            {{> _footer}}
+        </div>
+    </div>
+</body>
+</html>

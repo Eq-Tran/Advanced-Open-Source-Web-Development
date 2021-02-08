@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  
+}
+
+.container{
+  display: flex;
+  width: 80%;
+  max-width: 80%;
+  justify-content: center;
+}
+a {
+  color: #1b98c9;
+  font-size: larger;
+}
+
+div{
+  display: flex;
+  text-align: center;
+}
+
+nav{
+  text-align: center;
+}
+
+footer{
+  clear:both;
+  justify-content: center;
+}
+
