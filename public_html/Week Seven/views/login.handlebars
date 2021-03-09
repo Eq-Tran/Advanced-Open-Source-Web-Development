@@ -1,0 +1,16 @@
+<h1>Login Page</h1>
+{{#if messages.error}}
+    <span style="color: red;">{{messages.error}}</span>
+{{/if}}
+<form action="/login" method="POST">
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <button type="submit">login</button>
+</form>
+<a href="/register">Register Page</a>

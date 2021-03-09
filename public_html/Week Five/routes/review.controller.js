@@ -1,6 +1,6 @@
 const e = require('express');
-const Review = require('./review.model');
-const debug = require('debug')('demo:review');
+var Review = require('./review.model');
+var debug = require('debug')('demo:review');
 
 function sendJsonResponse(res,status,content){
     res.status(status);

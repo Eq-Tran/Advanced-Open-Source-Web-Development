@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Favorite Foods</title>
+</head>
+<body>
+    <div id="container">
+        <h1>List of Food</h1>
+        <nav>
+            <a href="index.html">Enter Food</a>
+            <a href="#">See Favorite Food</a>
+        </nav>
+    </div>
+</body>
+<script>
+    fetch('/getData').then((foods)=>{
+        foods.json().then((theFoods) => {
+            console.log(theFoods);
+            for(let food of theFoods.food){
+                var element = document.createElement('p');
+                element.innerHTML = food.food;
+                document.getElementById('container').appendChild(element);
+
+                var deleteBtn = document.createElement('button');
+                deleteBtn.innerText = 'Delete Entry';
+                deleteBtn.addEventListener('click', function deleteFood(){
+                    location.reload();
+                    fetch('/deleteFood', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            _id:food._id
+                        })
+                    }).catch(err =>{
+                        console.log(err);
+                    })
+                });
+                element.appendChild(deleteBtn);
+            }
+        }).catch((err) =>{
+            console.log("error inside of json callback");
+        })
+    }).catch((err) => {
+        console.log(err);
+    })
+</script>
+</html>

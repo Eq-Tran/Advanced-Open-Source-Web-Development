@@ -3,8 +3,8 @@ var router = express.Router();
 var ctrlReviews = require('./review.controller');
 
 router.get('/reviews', ctrlReviews.reviewsReadAll);
-router.get('/reviews/:reviewid', ctrlReviews.reviewsReadOne);
+router.get('/reviews/:reviewID', ctrlReviews.reviewsReadOne);
 router.post('/reviews', ctrlReviews.reviewsCreate);
-router.put('/reviews/:reviewid', ctrlReviews.reviewsUpdateOne);
-router.delete('/reviews/:reviewid', ctrlReviews.reviewsDeleteOne);
+router.put('/reviews/:reviewID', ctrlReviews.reviewsUpdateOne);
+router.delete('/reviews/:reviewID', ctrlReviews.reviewsDeleteOne);
 module.exports = router;

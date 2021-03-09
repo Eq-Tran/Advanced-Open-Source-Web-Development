@@ -1,0 +1,5 @@
+-- Databases(Schemas)
+    ---Collections(Databases)
+        -Users
+        -Index
+        -UserId
